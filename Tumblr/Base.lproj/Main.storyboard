@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jTv-4K-bzN">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jTv-4K-bzN">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -22,28 +23,27 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PhotoCell" rowHeight="240" id="ztb-5l-cFW" customClass="PhotoCell" customModule="Tumblr" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="PhotoCell" rowHeight="240" id="ztb-5l-cFW" customClass="PhotoCell" customModule="Tumblr" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="240"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ztb-5l-cFW" id="HgI-GO-2kz">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="239.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="239.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="a1L-uN-tiW">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="250"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="250" id="vk7-KC-bvv"/>
-                                                    </constraints>
+                                                    <rect key="frame" x="0.0" y="0.0" width="342" height="229.5"/>
                                                 </imageView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="a1L-uN-tiW" firstAttribute="top" secondItem="HgI-GO-2kz" secondAttribute="top" id="WN0-ih-V8T"/>
-                                                <constraint firstItem="a1L-uN-tiW" firstAttribute="leading" secondItem="HgI-GO-2kz" secondAttribute="leading" id="ZJh-Jg-x3D"/>
-                                                <constraint firstAttribute="trailing" secondItem="a1L-uN-tiW" secondAttribute="trailing" id="oQb-ok-jlL"/>
+                                                <constraint firstItem="a1L-uN-tiW" firstAttribute="leading" secondItem="HgI-GO-2kz" secondAttribute="leading" id="Jgb-vW-kis"/>
+                                                <constraint firstItem="a1L-uN-tiW" firstAttribute="top" secondItem="HgI-GO-2kz" secondAttribute="top" id="QhY-mc-Rqi"/>
+                                                <constraint firstAttribute="trailing" secondItem="a1L-uN-tiW" secondAttribute="trailing" id="TLa-r1-Chu"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="a1L-uN-tiW" secondAttribute="bottom" constant="-0.5" id="x0F-n3-7eK"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="photoImageView" destination="a1L-uN-tiW" id="YOW-Xo-MIk"/>
+                                            <segue destination="d0F-as-FIx" kind="push" id="T6y-ra-UL3"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -60,6 +60,55 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="376.80000000000001" y="65.217391304347828"/>
+        </scene>
+        <!--Photo Details View Controller-->
+        <scene sceneID="U3K-Ja-AB2">
+            <objects>
+                <viewController id="d0F-as-FIx" customClass="PhotoDetailsViewController" customModule="Tumblr" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OPb-vF-gHr">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" maximumZoomScale="3" translatesAutoresizingMaskIntoConstraints="NO" id="4L4-YZ-0AL">
+                                <rect key="frame" x="0.0" y="64" width="375" height="241"/>
+                                <subviews>
+                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="viV-ZX-aPP">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="241"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="viV-ZX-aPP" firstAttribute="centerY" secondItem="4L4-YZ-0AL" secondAttribute="centerY" id="AIG-jc-N8F"/>
+                                    <constraint firstItem="viV-ZX-aPP" firstAttribute="top" secondItem="4L4-YZ-0AL" secondAttribute="top" id="Rfk-Vq-pEa"/>
+                                    <constraint firstAttribute="bottom" secondItem="viV-ZX-aPP" secondAttribute="bottom" id="XF8-Cc-UKz"/>
+                                    <constraint firstItem="viV-ZX-aPP" firstAttribute="leading" secondItem="4L4-YZ-0AL" secondAttribute="leading" id="fvV-e6-AD4"/>
+                                    <constraint firstAttribute="trailing" secondItem="viV-ZX-aPP" secondAttribute="trailing" id="ktM-no-8PQ"/>
+                                    <constraint firstItem="viV-ZX-aPP" firstAttribute="centerX" secondItem="4L4-YZ-0AL" secondAttribute="centerX" id="rGR-De-54E"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="bHl-Ud-fDe" firstAttribute="bottom" secondItem="4L4-YZ-0AL" secondAttribute="bottom" constant="362" id="BKr-qi-jBE"/>
+                            <constraint firstItem="4L4-YZ-0AL" firstAttribute="top" secondItem="bHl-Ud-fDe" secondAttribute="top" id="XDX-3u-Xqs"/>
+                            <constraint firstItem="4L4-YZ-0AL" firstAttribute="leading" secondItem="OPb-vF-gHr" secondAttribute="leading" id="tuV-L0-NJH"/>
+                            <constraint firstAttribute="trailing" secondItem="4L4-YZ-0AL" secondAttribute="trailing" id="uuM-Up-NMc"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="bHl-Ud-fDe"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="KPU-1W-bnY" appends="YES" id="GFk-yC-Cd6"/>
+                        </connections>
+                    </view>
+                    <navigationItem key="navigationItem" id="cxw-BA-OGy"/>
+                    <connections>
+                        <outlet property="photoView" destination="viV-ZX-aPP" id="Wrz-Pr-2ob"/>
+                        <outlet property="scrollView" destination="4L4-YZ-0AL" id="Vew-9D-RzU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xtB-c0-tm9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="KPU-1W-bnY"/>
+            </objects>
+            <point key="canvasLocation" x="1176.8" y="64.31784107946028"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="HTx-tj-m6N">

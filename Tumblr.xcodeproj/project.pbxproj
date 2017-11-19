@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2E67CBCC72D7A2ED150685B2 /* Pods_Tumblr.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEE1FC384049083A61BB8DCA /* Pods_Tumblr.framework */; };
+		B2949F1A1FBFDB4B00E53748 /* PhotoDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2949F191FBFDB4B00E53748 /* PhotoDetailsViewController.swift */; };
 		B2EECEC61FB77E9B0019FB3D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2EECEC51FB77E9B0019FB3D /* AppDelegate.swift */; };
 		B2EECECB1FB77E9B0019FB3D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2EECEC91FB77E9B0019FB3D /* Main.storyboard */; };
 		B2EECECE1FB77E9B0019FB3D /* Tumblr.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B2EECECC1FB77E9B0019FB3D /* Tumblr.xcdatamodeld */; };
@@ -19,6 +20,7 @@
 
 /* Begin PBXFileReference section */
 		7F72A692E296466AE6EC10E2 /* Pods-Tumblr.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tumblr.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tumblr/Pods-Tumblr.release.xcconfig"; sourceTree = "<group>"; };
+		B2949F191FBFDB4B00E53748 /* PhotoDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailsViewController.swift; sourceTree = "<group>"; };
 		B2EECEC21FB77E9B0019FB3D /* Tumblr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tumblr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2EECEC51FB77E9B0019FB3D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B2EECECA1FB77E9B0019FB3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 				B2EECECC1FB77E9B0019FB3D /* Tumblr.xcdatamodeld */,
 				B2EECEDA1FB77F4E0019FB3D /* PhotosViewController.swift */,
 				B2EECEDC1FB79A1E0019FB3D /* PhotoCell.swift */,
+				B2949F191FBFDB4B00E53748 /* PhotoDetailsViewController.swift */,
 			);
 			path = Tumblr;
 			sourceTree = "<group>";
@@ -218,6 +221,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B2EECEDD1FB79A1E0019FB3D /* PhotoCell.swift in Sources */,
+				B2949F1A1FBFDB4B00E53748 /* PhotoDetailsViewController.swift in Sources */,
 				B2EECEDB1FB77F4E0019FB3D /* PhotosViewController.swift in Sources */,
 				B2EECECE1FB77E9B0019FB3D /* Tumblr.xcdatamodeld in Sources */,
 				B2EECEC61FB77E9B0019FB3D /* AppDelegate.swift in Sources */,
